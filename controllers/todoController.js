@@ -27,7 +27,7 @@ const createTodo = async (req, res) => {
 		res.status(201).json(todo);
 	} catch (error) {
 		console.error(error);
-		res.status(500).json({ error: 'Internal Server Error'+ error + req });
+		res.status(500).json({ error: 'Internal Server Error'+ error + req.body });
 	}
 };
 
